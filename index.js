@@ -9,37 +9,54 @@
 
 
 
-/////////////////////////////////////////
+///////////////////////////////////////// 6. Object Destruncturing #2(속성확장과 기본값)
 
-
-
-///////////////////////////////////////// Object Destruncturing #1
-{
 var exam = {
     kor:20,
     eng:30,
     math:40
 };
 
-// function printExam(exam) {
-function printExam({kor, eng, math}) {
-// 
+let {kor, eng, math, total=kor+eng+math} = exam;
+
+console.log(`${kor}, ${math}, ${total}`)
+console.log(exam)
 
 
-    // // Destruncturing 
-    // let kor = exam.kor;
-    // let eng = exam.eng;
-    // let math = exam.math;
+exam.kor = 200;
+exam.math = 400;
+({kor, eng, math} = exam); // 객체 속성값 재정의 가능 소괄호
 
-    // let {kor, eng, math} = exam;
+console.log(`${kor}, ${math}`)
+console.log(exam)
 
-    console.log("---- print() ")
-    console.log(`${kor}, ${eng}, ${math}`);
-    // console.log(`${total}`);
-}
+///////////////////////////////////////// 6. Object Destruncturing #1
+// {
+// var exam = {
+//     kor:20,
+//     eng:30,
+//     math:40
+// };
 
-printExam(exam);
-}
+// // function printExam(exam) {
+// function printExam({kor, eng, math}) {
+// // 
+
+
+//     // // Destruncturing 
+//     // let kor = exam.kor;
+//     // let eng = exam.eng;
+//     // let math = exam.math;
+
+//     // let {kor, eng, math} = exam;
+
+//     console.log("---- print() ")
+//     console.log(`${kor}, ${eng}, ${math}`);
+//     // console.log(`${total}`);
+// }
+
+// printExam(exam);
+// }
 
 ///////////////////////////////////////// 5. 향상된 json 객체 표현식 #2
 

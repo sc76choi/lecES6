@@ -5,30 +5,69 @@
 
 
 
-/////////////////////////////////////////
+///////////////////////////////////////// 7. Object Destruncturing #3(뽀개기 중첩과 적응)
+{
+// 객체의 속성과 다른 이름을 지정하려면?
 
+// var exam = {
+//     kor:20,
+//     eng:30,
+//     math:40
+// };
 
+// // Destructuring
+// let {kor, eng} = exam;
+// let {kor:korean, eng:english} = exam; // 속성:{별칭}
 
-///////////////////////////////////////// 6. Object Destruncturing #2(속성확장과 기본값)
+// console.log(korean); // kor, eng는 사용 못함
+// console.log(english);
 
+// 객체가 중첩된 경우
 var exam = {
     kor:20,
     eng:30,
-    math:40
+    math:40,
+    student:{
+        name : "sc",
+        phone : "010-123-4567"
+    }
 };
 
-let {kor, eng, math, total=kor+eng+math} = exam;
+// let kor = exam.kor;
+// let eng = exam.eng;
+// let name = exam.student.name;
+// let phone = exam.student.phone;
 
-console.log(`${kor}, ${math}, ${total}`)
-console.log(exam)
+let {kor, eng, student:{name, phone}} = exam;
+
+console.log(kor);
+console.log(eng);
+console.log(name);
+console.log(phone);
 
 
-exam.kor = 200;
-exam.math = 400;
-({kor, eng, math} = exam); // 객체 속성값 재정의 가능 소괄호
+}
 
-console.log(`${kor}, ${math}`)
-console.log(exam)
+///////////////////////////////////////// 6. Object Destruncturing #2(속성확장과 기본값)
+
+// var exam = {
+//     kor:20,
+//     eng:30,
+//     math:40
+// };
+
+// let {kor, eng, math, total=kor+eng+math} = exam;
+
+// console.log(`${kor}, ${math}, ${total}`)
+// console.log(exam)
+
+
+// exam.kor = 200;
+// exam.math = 400;
+// ({kor, eng, math} = exam); // 객체 속성값 재정의 가능 소괄호
+
+// console.log(`${kor}, ${math}`)
+// console.log(exam)
 
 ///////////////////////////////////////// 6. Object Destruncturing #1
 // {

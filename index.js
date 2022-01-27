@@ -6,7 +6,9 @@
 let template = `내려써도
 괜찮아`;
 
-console.log(template)
+console.log(template);
+
+
 
 
 ///////////////////////////////////////// 3. const 변수

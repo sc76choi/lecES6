@@ -1,17 +1,8 @@
-/////////////////////////////////////////
-// 
-/////////////////////////////////////////
-
-/////////////////////////////////////////
-// 
-/////////////////////////////////////////
-
-///////////////////////////////////////// 21 - static 멤버 정의하기
-// https://youtu.be/AipNBFZQJTQ
-/////////////////////////////////////////
 
 
-// 외부에 노출하지 않기
+///////////////////////////////////////// 22 - 속성 은닉화를 위한 쉬운 Getters/Setters 지원
+// https://youtu.be/cw5WNsfonhg
+/////////////////////////////////////////
 
 class Exam {
 
@@ -24,6 +15,14 @@ class Exam {
         this.#kor = kor; // 인스턴스 속성(필드)
         this.#eng = eng;
         this.#math = math;
+    }
+
+    get kor() {
+        return this.#kor
+    }
+
+    set kor(value) {
+        this.#kor = value;
     }
 
     #total() {
@@ -40,14 +39,56 @@ class Exam {
     }
 }
 
-// let exam = new Exam(10, 20, 30);
 
-let exam1 = new Exam(10, 20, 30);
-// let exam2 = new Exam(1, 2, 3);
-// let exam3 = new Exam(1, 22, 33);
+let exam1 = new Exam();
+exam1.kor = 30;
+console.log(exam1.kor);
 
 
-console.log("info : " + Exam.info());
+
+
+
+///////////////////////////////////////// 21 - static 멤버 정의하기
+// https://youtu.be/AipNBFZQJTQ
+/////////////////////////////////////////
+
+// 외부에 노출하지 않기
+
+// class Exam {
+
+//     #kor; // private 선언(#)
+//     #eng;
+//     #math;
+//     static #info = "안녕하세요. Exam 클래스 입니다."  // static 전역변수;
+
+//     constructor(kor, eng, math) {
+//         this.#kor = kor; // 인스턴스 속성(필드)
+//         this.#eng = eng;
+//         this.#math = math;
+//     }
+
+//     #total() {
+//         return this.#kor + this.#eng + this.#math;
+//     }
+
+//     avg() {
+//         return this.#total() / 3.0;
+//     }
+
+//     // static 전역변수
+//     static info() {
+//         return Exam.#info; 
+//     }
+// }
+
+// // let exam = new Exam(10, 20, 30);
+
+// let exam1 = new Exam(10, 20, 30);
+// // let exam2 = new Exam(1, 2, 3);
+// // let exam3 = new Exam(1, 22, 33);
+
+
+// console.log("info : " + Exam.info());
 
 // console.log("total : " + exam.avg());
 // console.log("info : " + exam.info());

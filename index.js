@@ -22,28 +22,54 @@
 // 
 /////////////////////////////////////////
 
-///////////////////////////////////////// 
-// 
+///////////////////////////////////////// 17 - Default Value의 이전방식과 현재방식
+// https://youtu.be/i2WoD5BvDEs
 /////////////////////////////////////////
+
+
+// {
+//     console.log("hi - 5" || 2 || 5); // null, 빈값(""), undefined 등의 false로 인식
+// }
+
+function add(x = 0, y = 0) {
+    // x = x || 0;
+    // y = y || 0;
+    return x + y;
+}
+
+// console.log(add(2, 3));
+// console.log(add(1));
+
+
+function add2(x, y = 10) {
+    console.log("length : " + arguments.length);
+    return x + y;
+}
+
+
+console.log(add2(1));
+console.log(add2(1, 2));
+console.log(undefined);
+
 
 ///////////////////////////////////////// 16 - Spread Operator
 // https://youtu.be/Qxh55yYk1bU
 /////////////////////////////////////////
 
-function print(x, y, z) {
-    console.log(x);
-    console.log(y);
-    console.log(z);
-}
+// function print(x, y, z) {
+//     console.log(x);
+//     console.log(y);
+//     console.log(z);
+// }
 
-let map = new Map();
-map.set("id", 333);
-map.set("title", "hello");
+// let map = new Map();
+// map.set("id", 333);
+// map.set("title", "hello");
 
-let temp = [...map];
-// console.log(temp[0][1]);
-// console.log(temp[1][1]);
-print(...temp);
+// let temp = [...map];
+// // console.log(temp[0][1]);
+// // console.log(temp[1][1]);
+// print(...temp);
 
 
 // let set = new Set([2, 4, 6]);

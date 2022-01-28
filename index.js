@@ -14,42 +14,81 @@
 // 
 /////////////////////////////////////////
 
-///////////////////////////////////////// 
+///////////////////////////////////////// 19 - class를 이용한 객체 정의
 // 
 /////////////////////////////////////////
 
-///////////////////////////////////////// 
-// 
+///////////////////////////////////////// 18 - Arrow Functions와 그 특징
+// https://youtu.be/DpIoo-oNQBs
 /////////////////////////////////////////
+
+// No this
+// No arguments
+// No super
+// No new.target
+
+// function print() {
+//     this.kor = 10;
+//     console.log("print : " + window.kor);
+// }
+
+
+// function Exam() {
+//     this.kor = 0;
+//     this.eng = 0;
+//     this.math = 0;
+// }
+
+// print();
+// let exam = new Exam();
+// console.log(exam.kor);
+// console.log(kor);
+
+
+// 함수를 즉석에서 정의해서 넘기는 경우가 많다.
+let nums = [13, 4, 6, 1, 3, 26];
+
+// nums.sort();
+
+// 
+// function compare(x, y) {
+//     return x-y;
+// }
+// nums.sort(compare);
+
+nums.sort((x, y) => x-y);
+console.log(nums);
+
+
+
 
 ///////////////////////////////////////// 17 - Default Value의 이전방식과 현재방식
 // https://youtu.be/i2WoD5BvDEs
 /////////////////////////////////////////
 
-
 // {
 //     console.log("hi - 5" || 2 || 5); // null, 빈값(""), undefined 등의 false로 인식
 // }
 
-function add(x = 0, y = 0) {
-    // x = x || 0;
-    // y = y || 0;
-    return x + y;
-}
+// function add(x = 0, y = 0) {
+//     // x = x || 0;
+//     // y = y || 0;
+//     return x + y;
+// }
 
-// console.log(add(2, 3));
-// console.log(add(1));
-
-
-function add2(x, y = 10) {
-    console.log("length : " + arguments.length);
-    return x + y;
-}
+// // console.log(add(2, 3));
+// // console.log(add(1));
 
 
-console.log(add2(1));
-console.log(add2(1, 2));
-console.log(undefined);
+// function add2(x, y = 10) {
+//     console.log("length : " + arguments.length);
+//     return x + y;
+// }
+
+
+// console.log(add2(1));
+// console.log(add2(1, 2));
+// console.log(undefined);
 
 
 ///////////////////////////////////////// 16 - Spread Operator

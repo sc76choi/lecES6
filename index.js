@@ -15,8 +15,49 @@
 /////////////////////////////////////////
 
 ///////////////////////////////////////// 19 - class를 이용한 객체 정의
-// 
+// https://youtu.be/e-OsENI4m7Q
 /////////////////////////////////////////
+
+/**
+ * 기존 함수로 정의하던 방법과의 차이점
+ * - class 블록 안의 코드는 strict 모드로 실행된다.
+ * - class 블록 안의 모든 메소드는 열거할 수 없다.
+ * - class 생성자는 new를 통하지 않고는 호출할 수 없다.
+ */
+
+// // 기존
+// let proto = {kor:10, eng:30};
+
+// function Exam() {
+
+// }
+
+// Exam.prototype = proto;
+// let exam = new Exam();
+// console.log(exam.kor);
+
+class Exam {
+    constructor(kor, eng, math) {
+        this.kor = kor;
+        this.eng = eng;
+        this.math = math;
+    }
+
+    total() {
+        return this.kor + this.eng + this.math;
+    }
+
+    avg() {
+        return this.total() / 3.0;
+    }
+}
+
+let exam = new Exam(10, 20, 30);
+console.log("total : " + exam.total());
+
+
+
+
 
 ///////////////////////////////////////// 18 - Arrow Functions와 그 특징
 // https://youtu.be/DpIoo-oNQBs
@@ -45,19 +86,19 @@
 // console.log(kor);
 
 
-// 함수를 즉석에서 정의해서 넘기는 경우가 많다.
-let nums = [13, 4, 6, 1, 3, 26];
+// // 함수를 즉석에서 정의해서 넘기는 경우가 많다.
+// let nums = [13, 4, 6, 1, 3, 26];
 
-// nums.sort();
+// // nums.sort();
 
-// 
-// function compare(x, y) {
-//     return x-y;
-// }
-// nums.sort(compare);
+// // 
+// // function compare(x, y) {
+// //     return x-y;
+// // }
+// // nums.sort(compare);
 
-nums.sort((x, y) => x-y);
-console.log(nums);
+// nums.sort((x, y) => x-y);
+// console.log(nums);
 
 
 

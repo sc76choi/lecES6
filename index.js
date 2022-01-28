@@ -10,9 +10,44 @@
 // 
 /////////////////////////////////////////
 
-///////////////////////////////////////// 
-// 
+///////////////////////////////////////// 20 - class 멤버 은닉하기
+// https://youtu.be/GOjtMeodZiY
 /////////////////////////////////////////
+
+// 외부에 노출하지 않기
+
+class Exam {
+
+    #kor; // private 선언(#)
+    #eng;
+    #math;
+
+    constructor(kor, eng, math) {
+        this.#kor = kor;
+        this.#eng = eng;
+        this.#math = math;
+    }
+
+    #total() {
+        return this.#kor + this.#eng + this.#math;
+    }
+
+    avg() {
+        return this.#total() / 3.0;
+    }
+}
+
+let exam = new Exam(10, 20, 30);
+console.log("total : " + exam.avg());
+// console.log("total : " + exam.total());
+// Uncaught TypeError: exam.total is not a function
+
+
+// console.log(exam.kor); // undefined
+// Private field '#kor' must be declared in an enclosing class
+
+
+
 
 ///////////////////////////////////////// 19 - class를 이용한 객체 정의
 // https://youtu.be/e-OsENI4m7Q
@@ -36,24 +71,24 @@
 // let exam = new Exam();
 // console.log(exam.kor);
 
-class Exam {
-    constructor(kor, eng, math) {
-        this.kor = kor;
-        this.eng = eng;
-        this.math = math;
-    }
+// class Exam {
+//     constructor(kor, eng, math) {
+//         this.kor = kor;
+//         this.eng = eng;
+//         this.math = math;
+//     }
 
-    total() {
-        return this.kor + this.eng + this.math;
-    }
+//     total() {
+//         return this.kor + this.eng + this.math;
+//     }
 
-    avg() {
-        return this.total() / 3.0;
-    }
-}
+//     avg() {
+//         return this.total() / 3.0;
+//     }
+// }
 
-let exam = new Exam(10, 20, 30);
-console.log("total : " + exam.total());
+// let exam = new Exam(10, 20, 30);
+// console.log("total : " + exam.total());
 
 
 

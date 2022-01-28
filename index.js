@@ -8,8 +8,60 @@
 /////////////////////////////////////////
 
 
+///////////////////////////////////////// 13 - Set 콜렉션
+// https://youtu.be/tUXMrY1nNqw
 /////////////////////////////////////////
 
+// Set - List - Map
+
+// let set = new Set();
+// // set.add(5);
+// // set.add("5");
+// // set.add(2);
+// // set.add(5);
+
+// set.add(5).add("5").add(2).add(5);
+
+// console.log(set.size)
+
+
+let arr = [10, 20, 30, 20, 30, 40, 30, 40, 50];
+let set = new Set(arr);
+
+// console.log(set.size);
+
+// 값 나열하기
+set.forEach(function(value, key, ownerSet) {
+    console.log(key + " : " + value);
+})
+
+// // for-of를 이용한 값 나열
+// let set2 = new Set([2, 10, 7, 45, 23]);
+// for(let v of set2) {
+//     console.log(v);
+// }
+
+// for-of를 이용한 값 나열
+let set3 = new Set([2, 10, 7, 45, 23]);
+for(let [key, value] of set3.entries()) {
+    console.log(key + " : " +  value);
+}
+
+let set4 = new Set();
+set4.add(4).add(5);
+
+console.log("----" + set4.size);
+console.log(set4.has(4));
+console.log(set4.has("4"));
+
+set4.delete(5);
+console.log("----" + set4.size);
+
+set4.add(6).add(7);
+console.log("----" + set4.size);
+
+set4.clear();
+console.log("----" + set4.size);
 
 ///////////////////////////////////////// 12 - Array Destructuring #2
 
@@ -22,21 +74,21 @@
 
 // console.log(first);
 
-console.log(`---------------------------------`);
+// console.log(`---------------------------------`);
 
-let notices = {
-    title : "공지사항",
-    list : [
-        {title:"오~", content:"내용무"},
-        {title:"하~", content:"ㅋㅋ"}
-    ]
-};
+// let notices = {
+//     title : "공지사항",
+//     list : [
+//         {title:"오~", content:"내용무"},
+//         {title:"하~", content:"ㅋㅋ"}
+//     ]
+// };
 
-let {list:[notice1]} = notices;
-let {list:[,notice2]} = notices;
+// let {list:[notice1]} = notices;
+// let {list:[,notice2]} = notices;
 
-console.log(notice1.title);
-console.log(notice2.title);
+// console.log(notice1.title);
+// console.log(notice2.title);
 
 
 

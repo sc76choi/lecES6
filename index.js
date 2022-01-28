@@ -26,9 +26,30 @@
 // 
 /////////////////////////////////////////
 
-///////////////////////////////////////// 
-// 
+///////////////////////////////////////// 16 - Spread Operator
+// https://youtu.be/Qxh55yYk1bU
 /////////////////////////////////////////
+
+function print(x, y, z) {
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}
+
+let map = new Map();
+map.set("id", 333);
+map.set("title", "hello");
+
+let temp = [...map];
+// console.log(temp[0][1]);
+// console.log(temp[1][1]);
+print(...temp);
+
+
+// let set = new Set([2, 4, 6]);
+// let nums = [...set];
+
+// print(...nums);
 
 
 ///////////////////////////////////////// 15 - Rest Parameters

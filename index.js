@@ -1,11 +1,51 @@
 /////////////////////////////////////////
-
+// 
 /////////////////////////////////////////
 
 /////////////////////////////////////////
+// 
+/////////////////////////////////////////
+
+/////////////////////////////////////////
+// 
+/////////////////////////////////////////
+
+/////////////////////////////////////////
+// 
+/////////////////////////////////////////
 
 
 /////////////////////////////////////////
+// 
+/////////////////////////////////////////
+
+
+///////////////////////////////////////// 14 - Map 콜렉션
+// https://youtu.be/wP4oHNylsvM
+/////////////////////////////////////////
+
+// let map = new Map();
+// map.set("id", 1);
+
+// console.log(map.size);
+// console.log("---------------");
+
+// map.set("title", "map이란?");
+// console.log(map.size);
+// console.log("---------------");
+// console.log(map.get("title"));
+
+
+let exam = new Map([[1, "hello"], [2, "hi"], [4, "ok"]]);
+// exam.set("kor", 10);
+// exam.set("eng", 10);
+// exam.set("math", 10);
+
+
+for(let [k, v] of exam) {
+    console.log(typeof v)
+    console.log(k + " : " + v);
+}
 
 
 ///////////////////////////////////////// 13 - Set 콜렉션
@@ -25,43 +65,43 @@
 // console.log(set.size)
 
 
-let arr = [10, 20, 30, 20, 30, 40, 30, 40, 50];
-let set = new Set(arr);
+// let arr = [10, 20, 30, 20, 30, 40, 30, 40, 50];
+// let set = new Set(arr);
 
-// console.log(set.size);
+// // console.log(set.size);
 
-// 값 나열하기
-set.forEach(function(value, key, ownerSet) {
-    console.log(key + " : " + value);
-})
+// // 값 나열하기
+// set.forEach(function(value, key, ownerSet) {
+//     console.log(key + " : " + value);
+// })
+
+// // // for-of를 이용한 값 나열
+// // let set2 = new Set([2, 10, 7, 45, 23]);
+// // for(let v of set2) {
+// //     console.log(v);
+// // }
 
 // // for-of를 이용한 값 나열
-// let set2 = new Set([2, 10, 7, 45, 23]);
-// for(let v of set2) {
-//     console.log(v);
+// let set3 = new Set([2, 10, 7, 45, 23]);
+// for(let [key, value] of set3.entries()) {
+//     console.log(key + " : " +  value);
 // }
 
-// for-of를 이용한 값 나열
-let set3 = new Set([2, 10, 7, 45, 23]);
-for(let [key, value] of set3.entries()) {
-    console.log(key + " : " +  value);
-}
+// let set4 = new Set();
+// set4.add(4).add(5);
 
-let set4 = new Set();
-set4.add(4).add(5);
+// console.log("----" + set4.size);
+// console.log(set4.has(4));
+// console.log(set4.has("4"));
 
-console.log("----" + set4.size);
-console.log(set4.has(4));
-console.log(set4.has("4"));
+// set4.delete(5);
+// console.log("----" + set4.size);
 
-set4.delete(5);
-console.log("----" + set4.size);
+// set4.add(6).add(7);
+// console.log("----" + set4.size);
 
-set4.add(6).add(7);
-console.log("----" + set4.size);
-
-set4.clear();
-console.log("----" + set4.size);
+// set4.clear();
+// console.log("----" + set4.size);
 
 ///////////////////////////////////////// 12 - Array Destructuring #2
 

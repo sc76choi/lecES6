@@ -1,7 +1,106 @@
+/////////////////////////////////////////
 
+/////////////////////////////////////////
+
+/////////////////////////////////////////
 
 
 /////////////////////////////////////////
+
+
+/////////////////////////////////////////
+
+
+///////////////////////////////////////// 12 - Array Destructuring #2
+
+// let notice = {
+//     title : "공지사항",
+//     files : ["img1.png", "img3.png"]
+// };
+
+// let {files:[first]} = notice;
+
+// console.log(first);
+
+console.log(`---------------------------------`);
+
+let notices = {
+    title : "공지사항",
+    list : [
+        {title:"오~", content:"내용무"},
+        {title:"하~", content:"ㅋㅋ"}
+    ]
+};
+
+let {list:[notice1]} = notices;
+let {list:[,notice2]} = notices;
+
+console.log(notice1.title);
+console.log(notice2.title);
+
+
+
+
+
+
+///////////////////////////////////////// 11 - Array Destructuring #2
+
+// let kors = [10, 20, 30];
+// let [kor1, kor2, kor3, kor4=40] = kors;
+
+// console.log(kors);
+// console.log(kor4);
+
+// // Nested Array
+// let exam = [10, 20, 30, [40, 50]];
+// let [kor, eng, math, [com, history]] = exam;
+
+// console.log(com);
+
+///////////////////////////////////////// 11 - Array Destructuring #1
+
+// let kors = [10, 20, 30];
+// let [kor1, kor2] = kors;
+
+
+// console.log(kor1);
+// console.log(kor2);
+
+// let [,, kor3] = kors;
+// console.log(kor3);
+
+// let kors = [10, 20, 30];
+// let [kor1, kor2, kor3] = kors;
+
+
+// console.log(kor1);
+// console.log(kor2);
+// console.log(kor3);
+
+// console.log(`------------------------`);
+// let temp = [40, 50, 60];
+// // kors = temp; // 잘못된 복사
+// [kor1, kor2, kor3] = temp;
+
+
+// console.log(kor1);
+// console.log(kor2);
+// console.log(kor3);
+
+
+// // 순서 재배열
+// let x  = 2;
+// let y  = 3;
+// let z  = 5;
+
+// console.log(`${x}, ${y}, ${z}`);
+
+
+
+// console.log(`------------------------`);
+// [z, x, y] = [x, y, z];
+// console.log(`${x}, ${y}, ${z}`);
+
 
 
 
@@ -22,28 +121,28 @@
 // console.log(korean); // kor, eng는 사용 못함
 // console.log(english);
 
-// 객체가 중첩된 경우
-var exam = {
-    kor:20,
-    eng:30,
-    math:40,
-    student:{
-        name : "sc",
-        phone : "010-123-4567"
-    }
-};
+// // 객체가 중첩된 경우
+// var exam = {
+//     kor:20,
+//     eng:30,
+//     math:40,
+//     student:{
+//         name : "sc",
+//         phone : "010-123-4567"
+//     }
+// };
 
-// let kor = exam.kor;
-// let eng = exam.eng;
-// let name = exam.student.name;
-// let phone = exam.student.phone;
+// // let kor = exam.kor;
+// // let eng = exam.eng;
+// // let name = exam.student.name;
+// // let phone = exam.student.phone;
 
-let {kor, eng, student:{name, phone}} = exam;
+// let {kor, eng, student:{name, phone}} = exam;
 
-console.log(kor);
-console.log(eng);
-console.log(name);
-console.log(phone);
+// console.log(kor);
+// console.log(eng);
+// console.log(name);
+// console.log(phone);
 
 
 }

@@ -431,65 +431,66 @@
 // 
 /////////////////////////////////////////
 
-// let kors = [10, 20, 30];
-// let [kor1, kor2, kor3, kor4=40] = kors;
+{
+    // let kors = [10, 20, 30];
+    // let [kor1, kor2, kor3, kor4=40] = kors;
 
-// console.log(kors);
-// console.log(kor4);
+    // console.log(kors);
+    // console.log(kor4);
 
-// // Nested Array
-// let exam = [10, 20, 30, [40, 50]];
-// let [kor, eng, math, [com, history]] = exam;
+    // // Nested Array
+    // let exam = [10, 20, 30, [40, 50]];
+    // let [kor, eng, math, [com, history]] = exam;
 
-// console.log(com);
+    // console.log(com);
 
-///////////////////////////////////////// 11 - Array Destructuring #1
-// 
-/////////////////////////////////////////
+    ///////////////////////////////////////// 11 - Array Destructuring #1
+    // 
+    /////////////////////////////////////////
 
-// let kors = [10, 20, 30];
-// let [kor1, kor2] = kors;
-
-
-// console.log(kor1);
-// console.log(kor2);
-
-// let [,, kor3] = kors;
-// console.log(kor3);
-
-// let kors = [10, 20, 30];
-// let [kor1, kor2, kor3] = kors;
+    // let kors = [10, 20, 30];
+    // let [kor1, kor2] = kors;
 
 
-// console.log(kor1);
-// console.log(kor2);
-// console.log(kor3);
+    // console.log(kor1);
+    // console.log(kor2);
 
-// console.log(`------------------------`);
-// let temp = [40, 50, 60];
-// // kors = temp; // 잘못된 복사
-// [kor1, kor2, kor3] = temp;
+    // let [,, kor3] = kors;
+    // console.log(kor3);
 
-
-// console.log(kor1);
-// console.log(kor2);
-// console.log(kor3);
+    // let kors = [10, 20, 30];
+    // let [kor1, kor2, kor3] = kors;
 
 
-// // 순서 재배열
-// let x  = 2;
-// let y  = 3;
-// let z  = 5;
+    // console.log(kor1);
+    // console.log(kor2);
+    // console.log(kor3);
 
-// console.log(`${x}, ${y}, ${z}`);
-
-
-
-// console.log(`------------------------`);
-// [z, x, y] = [x, y, z];
-// console.log(`${x}, ${y}, ${z}`);
+    // console.log(`------------------------`);
+    // let temp = [40, 50, 60];
+    // // kors = temp; // 잘못된 복사
+    // [kor1, kor2, kor3] = temp;
 
 
+    // console.log(kor1);
+    // console.log(kor2);
+    // console.log(kor3);
+
+
+    // // 순서 재배열
+    // let x  = 2;
+    // let y  = 3;
+    // let z  = 5;
+
+    // console.log(`${x}, ${y}, ${z}`);
+
+
+
+    // console.log(`------------------------`);
+    // [z, x, y] = [x, y, z];
+    // console.log(`${x}, ${y}, ${z}`);
+
+}
 
 
 ///////////////////////////////////////// 7. Object Destruncturing #3(뽀개기 중첩과 적응)
@@ -542,73 +543,90 @@
 // 
 /////////////////////////////////////////
 
-// var exam = {
-//     kor:20,
-//     eng:30,
-//     math:40
-// };
+{
+    // var exam = {
+    //     kor:20,
+    //     eng:30,
+    //     math:40
+    // };
 
-// let {kor, eng, math, total=kor+eng+math} = exam;
+    // let {kor, eng, math, total=kor+eng+math} = exam;
 
-// console.log(`${kor}, ${math}, ${total}`)
-// console.log(exam)
+    // console.log(`${kor}, ${math}, ${total}`)
+    // console.log(exam)
 
 
-// exam.kor = 200;
-// exam.math = 400;
-// ({kor, eng, math} = exam); // 객체 속성값 재정의 가능 소괄호
+    // exam.kor = 200;
+    // exam.math = 400;
+    // ({kor, eng, math} = exam); // 객체 속성값 재정의 가능 소괄호
 
-// console.log(`${kor}, ${math}`)
-// console.log(exam)
+    // console.log(`${kor}, ${math}`)
+    // console.log(exam)
+}
 
-///////////////////////////////////////// 6. Object Destruncturing #1
-// 
+///////////////////////////////////////// 08 - Object Destructuring #1
+// https://youtu.be/17pLb57eMlU
 /////////////////////////////////////////
 
-// {
-// var exam = {
-//     kor:20,
-//     eng:30,
-//     math:40
-// };
+{
+    // var exam = {
+    //     kor:20,
+    //     eng:30,
+    //     math:40
+    // };
 
-// // function printExam(exam) {
-// function printExam({kor, eng, math}) {
-// // 
+    // // function printExam(exam) {
+    // function printExam({kor, eng, math}) {
+    // // 
+
+    //     // Destruncturing 
+    //     let kor = exam.kor;
+    //     let eng = exam.eng;
+    //     let math = exam.math;
+    //     // let {kor, eng, math} = exam;
+
+    //     console.log("---- print() ")
+    //     console.log(`${kor}, ${eng}, ${math}`);
+    //     // console.log(`${total}`);
+    // }
+
+    // printExam(exam);
+}
+
+///////////////////////////////////////// 07 - 향상된 JSON 객체 표현식 #2 : 변수형 속성
+// https://youtu.be/ZsFJ7lgZfDA
+/////////////////////////////////////////
+
+{
+    // let style = {
+    //     background-color:"red",
+    //     width:"100px"
+    // };
+
+    // // ""로 묶어준다.
+    // let style = {
+    //     "background-color":"red",
+    //     width:"100px"
+    // };
 
 
-//     // // Destruncturing 
-//     // let kor = exam.kor;
-//     // let eng = exam.eng;
-//     // let math = exam.math;
+    // let attr = "kor";
+    // let exam = {
+    //     // attr:10 // error
+    //     [attr]:10
+    // };
 
-//     // let {kor, eng, math} = exam;
-
-//     console.log("---- print() ")
-//     console.log(`${kor}, ${eng}, ${math}`);
-//     // console.log(`${total}`);
-// }
-
-// printExam(exam);
-// }
-
-///////////////////////////////////////// 5. 향상된 json 객체 표현식 #2
-
-// let attr = "kor";
-// let exam = {
-//     [attr]:10
-// };
-
-// console.log(exam.kor);
+    // console.log(exam.kor);
+}
 
 ///////////////////////////////////////// 06 - 향상된 JSON 객체 표현식 #1
 // https://youtu.be/gCp8cgGjjYs
 /////////////////////////////////////////
 
 {
-    let kor = 30;
-    let eng = 40;
-    let math = 50;
+    // let kor = 30;
+    // let eng = 40;
+    // let math = 50;
 
     // // 객체 만들기1
     // // var exam = {

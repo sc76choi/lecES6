@@ -4,45 +4,45 @@
 // https://youtu.be/cw5WNsfonhg
 /////////////////////////////////////////
 
-class Exam {
+// class Exam {
 
-    #kor; // private 선언(#)
-    #eng;
-    #math;
-    static #info = "안녕하세요. Exam 클래스 입니다."  // static 전역변수;
+//     #kor; // private 선언(#)
+//     #eng;
+//     #math;
+//     static #info = "안녕하세요. Exam 클래스 입니다."  // static 전역변수;
 
-    constructor(kor, eng, math) {
-        this.#kor = kor; // 인스턴스 속성(필드)
-        this.#eng = eng;
-        this.#math = math;
-    }
+//     constructor(kor, eng, math) {
+//         this.#kor = kor; // 인스턴스 속성(필드)
+//         this.#eng = eng;
+//         this.#math = math;
+//     }
 
-    get kor() {
-        return this.#kor
-    }
+//     get kor() {
+//         return this.#kor
+//     }
 
-    set kor(value) {
-        this.#kor = value;
-    }
+//     set kor(value) {
+//         this.#kor = value;
+//     }
 
-    #total() {
-        return this.#kor + this.#eng + this.#math;
-    }
+//     #total() {
+//         return this.#kor + this.#eng + this.#math;
+//     }
 
-    avg() {
-        return this.#total() / 3.0;
-    }
+//     avg() {
+//         return this.#total() / 3.0;
+//     }
 
-    // static 전역변수
-    static info() {
-        return Exam.#info; 
-    }
-}
+//     // static 전역변수
+//     static info() {
+//         return Exam.#info; 
+//     }
+// }
 
 
-let exam1 = new Exam();
-exam1.kor = 30;
-console.log(exam1.kor);
+// let exam1 = new Exam();
+// exam1.kor = 30;
+// console.log(exam1.kor);
 
 
 
@@ -394,6 +394,8 @@ console.log(exam1.kor);
 // console.log("----" + set4.size);
 
 ///////////////////////////////////////// 12 - Array Destructuring #2
+// 
+/////////////////////////////////////////
 
 // let notice = {
 //     title : "공지사항",
@@ -426,6 +428,8 @@ console.log(exam1.kor);
 
 
 ///////////////////////////////////////// 11 - Array Destructuring #2
+// 
+/////////////////////////////////////////
 
 // let kors = [10, 20, 30];
 // let [kor1, kor2, kor3, kor4=40] = kors;
@@ -440,6 +444,8 @@ console.log(exam1.kor);
 // console.log(com);
 
 ///////////////////////////////////////// 11 - Array Destructuring #1
+// 
+/////////////////////////////////////////
 
 // let kors = [10, 20, 30];
 // let [kor1, kor2] = kors;
@@ -487,6 +493,9 @@ console.log(exam1.kor);
 
 
 ///////////////////////////////////////// 7. Object Destruncturing #3(뽀개기 중첩과 적응)
+// 
+/////////////////////////////////////////
+
 {
 // 객체의 속성과 다른 이름을 지정하려면?
 
@@ -530,6 +539,8 @@ console.log(exam1.kor);
 }
 
 ///////////////////////////////////////// 6. Object Destruncturing #2(속성확장과 기본값)
+// 
+/////////////////////////////////////////
 
 // var exam = {
 //     kor:20,
@@ -551,6 +562,9 @@ console.log(exam1.kor);
 // console.log(exam)
 
 ///////////////////////////////////////// 6. Object Destruncturing #1
+// 
+/////////////////////////////////////////
+
 // {
 // var exam = {
 //     kor:20,
@@ -587,128 +601,151 @@ console.log(exam1.kor);
 
 // console.log(exam.kor);
 
-
-
-///////////////////////////////////////// 5. 향상된 json 객체 표현식 #1
-// {
-// let kor = 30;
-// let eng = 40;
-// let math = 50;
-
-// // var exam = {
-// //     kor:kor,
-// //     eng:eng,
-// //     math:math
-// // };
-
-// let exam = {kor, eng, math, total(){
-//     return 10;
-// }};
-
-// console.log(exam.kor)
-// console.log(exam.total())
-
-
-// }
-
-///////////////////////////////////////// 4. Template String
-
-// {
-// let title = "ES6";
-// let content = "새로운 기능 좋아";
-
-// let template = ` ${title} 내려써도
-// 괜찮아 ${content}`;
-
-
-// // let template2 = "철산도서관 \
-// //                      5층 노트북 \
-// //                      31 번";
-
-
-// console.log(template);
-
-// // 문자열 그대로 출력
-// let template2 = String.raw` ${title} 내려써도 \n\n\n
-// 괜찮아 ${content}`;
-
-// console.log(template2);
-
-// }
-
-
-
-///////////////////////////////////////// 3. const 변수
-
-// {
-//     const N = 1;
-//     const S = 5;
-
-//     var walkTo = 5;
-//     // S = 3; // Uncaught TypeError: Assignment to constant variable.
-
-//     const add = function(a, b) {
-//         return a + b;
-//     }
-
-//     add = 3; // Uncaught TypeError: add is not a function
-//     // const add : Assignment to constant variable.
-
-//     console.log(add(3, 4));
-// }
-
-
+///////////////////////////////////////// 06 - 향상된 JSON 객체 표현식 #1
+// https://youtu.be/gCp8cgGjjYs
 /////////////////////////////////////////
 
+{
+    let kor = 30;
+    let eng = 40;
+    let math = 50;
 
-// {
-//     let a = 30;
-// }
+    // // 객체 만들기1
+    // // var exam = {
+    // //     kor:kor,
+    // //     eng:eng,
+    // //     math:math
+    // // };
 
-// console.log(a);
+    // // 객체 만들기2
+    // // var exam = {
+    // //     kor,
+    // //     eng,
+    // //     math
+    // // };
 
-// function getValue(condition) { 
-//     if(condition) {
-//         var value = "ok";
-//         return value;
-//     }
-//     else {
-//         return value;
-//     }
-// }
+    // // 객체 만들기3
+    // let exam = {kor, eng, math, total(){
+    //     return 10;
+    // }};
 
+    // console.log(exam.kor)
+    // console.log(exam.total())
 
-// function getValue(condition) { 
-//     if(condition) {
+}
 
-//         {
-//             let value = "ok";
-//         }
-
-//         return value;
-//     }
-//     else {
-//         return value;
-//     }
-// }
-
-// false case : undefined -> 변수는 선언은 되었다. 값(undefined)
-// console.log(getValue(true)); 
-
-
-
+///////////////////////////////////////// 05 - Template String
+// https://youtu.be/RFRoC3dv6vo
 /////////////////////////////////////////
 
-// {
-//     // var x = 30;
-//     let x = 30; // Uncaught ReferenceError: x is not defined
-// }
+{
 
-// console.log(x);
+    // let title = "ES6";
+    // let content = "새로운 기능 좋아";
 
-///////////////////////////////////////// 
-// let x = 30;
-// console.log(x);
+    // let template = ` ${title} 내려써도
+    // 괜찮아 ${content}`;
 
-// var x = 40; //  Identifier 'x' has already been declared
-// console.log(x);
+
+    // // let template2 = "철산도서관 \
+    // //                      5층 노트북 \
+    // //                      31 번";
+
+
+    // console.log(template);
+
+    // // 문자열 그대로 출력
+    // let template2 = String.raw` ${title} 내려써도 \n\n\n
+    // 괜찮아 ${content}`;
+    // console.log(template2);
+
+}
+
+
+///////////////////////////////////////// 04 - const 키워드
+// https://youtu.be/dZlc2T2s9ow
+/////////////////////////////////////////
+
+{
+    // const N = 1;
+    // const S = 5;
+
+    // var walkTo = 5;
+    // // S = 3; // Uncaught TypeError: Assignment to constant variable.
+
+    // const add = function(a, b) {
+    //  return a + b;
+    // }
+
+    // add = 3; // Uncaught TypeError: add is not a function
+    // // const add : Assignment to constant variable.
+    // console.log(add(3, 4));
+}
+
+
+///////////////////////////////////////// 03 - let 키워드 #2: 이젠 지역변수가 생겼다.
+// https://youtu.be/P4ZmQZx0iyA
+/////////////////////////////////////////
+
+{
+    // // 에러가 안남
+    // {
+    //     var a = 30;
+    // }
+    // console.log(a);
+
+    // {
+    //     let a = 30;
+    //     console.log(a);
+    // }
+
+
+    // function getValue(condition) { 
+    //     if(condition) {
+    //         var value = "ok";
+    //         return value;
+    //     }
+    //     else {
+    //         return value;
+    //     }
+    // }
+
+    // function getValue(condition) { 
+    //     if(condition) {
+    //         {
+    //             let value = "ok";
+    //         }
+    //         return value;
+    //     }
+    //     else {
+    //         return value;
+    //     }
+    // }
+    
+    // console.log(getValue(false));  // false case : undefined -> 변수는 선언은 되었다. 값(undefined)
+}
+
+///////////////////////////////////////// 02 - let 키워드 #1:변수 선언이 무의미한 문제
+// https://youtu.be/MfqA3WWsM6g
+/////////////////////////////////////////
+
+{
+    // {
+    //     // var x = 30;
+    //     let x = 30; // Uncaught SyntaxError: Identifier 'x' has already been declared
+    //     console.log(x);
+    // }
+}
+
+///////////////////////////////////////// 01 - 학습 개요
+// https://youtu.be/ibPteaKu3C8
+/////////////////////////////////////////
+
+/**
+ * 
+ * ES6에서 큰 변화 (ES7, 8, 9 등 나옴)
+ * 
+ */
+{
+    
+}
